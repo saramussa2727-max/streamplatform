@@ -1,5 +1,5 @@
 <?php
-require_once "../../config/database.php";
+require_once "../config/database.php";
 
 $id = $_GET['id'];
 
@@ -11,3 +11,4 @@ $file = "../../storage/".$media['type']."s/".$media['file_path'];
 
 header("Content-Type: video/mp4");
 readfile($file);
+
