@@ -1,5 +1,5 @@
 <?php
-require_once "../../config/cors.php";
+require_once "../config/cors.php";
 require_once "../../middleware/auth.php";
 require_once "../../config/database.php";
 
@@ -12,3 +12,4 @@ $stmt = $pdo->prepare(
 $stmt->execute([$user['id'],$data['name'],$data['description']]);
 
 jsonResponse(["message"=>"Channel created"]);
+
