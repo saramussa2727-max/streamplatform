@@ -1,9 +1,9 @@
 <?php
-require_once "../../config/cors.php";
-require_once "../../middleware/auth.php";
-require_once "../../middleware/admin.php";
-require_once "../../config/database.php";
-require_once "../../utils/response.php";
+require_once "../config/cors.php";
+require_once "../middleware/auth.php";
+require_once "../middleware/admin.php";
+require_once "../config/database.php";
+require_once "../utils/response.php";
 
 /* -------- AUTH -------- */
 $user = authRequired();
@@ -66,3 +66,4 @@ $stmt->execute([
 ]);
 
 jsonResponse(["message" => "Media uploaded successfully"], 201);
+
